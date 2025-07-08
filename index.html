@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippix - CSS Component Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Snippix</h1>
+            </div>
+            <div class="nav-links">
+                <a href="" class="nav-link active">Home</a>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch" class="theme-switch">
+                    <label for="theme-switch" class="theme-label">
+                        <span class="theme-icon sun">☀️</span>
+                        <span class="theme-icon moon">🌙</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <main class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <div class="sidebar-header">
+                <h2>🎨 Style Library</h2>
+            </div>
+            <nav class="styles-nav">
+                <ul class="styles-list">
+                    <li><a href="#buttons" class="style-link active" data-style="buttons">🔘 Buttons</a></li>
+                    <li><a href="#cards" class="style-link" data-style="cards">🃏 Cards</a></li>
+                    <li><a href="#navbars" class="style-link" data-style="navbars">🧭 Navbars</a></li>
+                    <li><a href="#forms" class="style-link" data-style="forms">📝 Forms</a></li>
+                    <li><a href="#loaders" class="style-link" data-style="loaders">⏳ Loaders</a></li>
+                    <li><a href="#alerts" class="style-link" data-style="alerts">⚠️ Alerts</a></li>
+                    <li><a href="#modals" class="style-link" data-style="modals">🪟 Modals</a></li>
+                    <li><a href="#badges" class="style-link" data-style="badges">🏷️ Badges</a></li>
+                    <li><a href="#grids" class="style-link" data-style="grids">📊 Grids</a></li>
+                    <li><a href="#footers" class="style-link" data-style="footers">🦶 Footers</a></li>
+                    <li><a href="#animations" class="style-link" data-style="animations">✨ Animations</a></li>
+                    <li><a href="#tooltips" class="style-link" data-style="tooltips">💬 Tooltips</a></li>
+                    <li><a href="#progress" class="style-link" data-style="progress">📈 Progress Bars</a></li>
+                    <li><a href="#toggles" class="style-link" data-style="toggles">🔄 Toggles</a></li>
+                    <li><a href="#tabs" class="style-link" data-style="tabs">📑 Tabs</a></li>
+                    <li><a href="#accordions" class="style-link" data-style="accordions">📋 Accordions</a></li>
+                    <li><a href="#dropdowns" class="style-link" data-style="dropdowns">📋 Dropdowns</a></li>
+                    <li><a href="#sliders" class="style-link" data-style="sliders">🎚️ Sliders</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Center Content -->
+        <section class="center-content">
+            <div class="content-container">
+                <!-- Buttons Section -->
+                <div id="buttons" class="style-section active">
+                    <div class="section-header">
+                        <h1>🧷 Buttons</h1>
+                        <p class="section-description">A collection of CSS-styled buttons for all kinds of use-cases
+                            including primary, ghost, outline, and gradient buttons.</p>
+                    </div>
+
+                    <!-- Primary Button -->
+                    <div class="component-card" id="primary-button">
+                        <h3 class="component-title">Primary Button</h3>
+                        <div class="component-preview">
+                            <button class="btn btn-primary">Primary Button</button>
+                            <button class="btn btn-primary btn-large">Large Primary</button>
+                            <button class="btn btn-primary btn-small">Small</button>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="primary-tabs" id="primary-html" checked>
+                            <input type="radio" name="primary-tabs" id="primary-css">
+                            <div class="tab-labels">
+                                <label for="primary-html" class="tab-label">HTML</label>
+                                <label for="primary-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn-primary btn-large"&gt;Large Primary&lt;/button&gt;
+&lt;button class="btn btn-primary btn-small"&gt;Small&lt;/button&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-large { padding: 16px 32px; font-size: 16px; }
+.btn-small { padding: 8px 16px; font-size: 12px; }</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Outline Button -->
+                    <div class="component-card" id="outline-button">
+                        <h3 class="component-title">Outline Button</h3>
+                        <div class="component-preview">
+                            <button class="btn btn-outline">Outline Button</button>
+                            <button class="btn btn-outline btn-large">Large Outline</button>
+                            <button class="btn btn-outline btn-small">Small</button>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="outline-tabs" id="outline-html" checked>
+                            <input type="radio" name="outline-tabs" id="outline-css">
+                            <div class="tab-labels">
+                                <label for="outline-html" class="tab-label">HTML</label>
+                                <label for="outline-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;button class="btn btn-outline"&gt;Outline Button&lt;/button&gt;
+&lt;button class="btn btn-outline btn-large"&gt;Large Outline&lt;/button&gt;
+&lt;button class="btn btn-outline btn-small"&gt;Small&lt;/button&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Ghost Button -->
+                    <div class="component-card" id="ghost-button">
+                        <h3 class="component-title">Ghost Button</h3>
+                        <div class="component-preview">
+                            <button class="btn btn-ghost">Ghost Button</button>
+                            <button class="btn btn-ghost btn-large">Large Ghost</button>
+                            <button class="btn btn-ghost btn-small">Small</button>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="ghost-tabs" id="ghost-html" checked>
+                            <input type="radio" name="ghost-tabs" id="ghost-css">
+                            <div class="tab-labels">
+                                <label for="ghost-html" class="tab-label">HTML</label>
+                                <label for="ghost-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;button class="btn btn-ghost"&gt;Ghost Button&lt;/button&gt;
+&lt;button class="btn btn-ghost btn-large"&gt;Large Ghost&lt;/button&gt;
+&lt;button class="btn btn-ghost btn-small"&gt;Small&lt;/button&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.btn-ghost {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  position: relative;
+}
+
+.btn-ghost::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--hover-bg);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover::before {
+  opacity: 1;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Gradient Button -->
+                    <div class="component-card" id="gradient-button">
+                        <h3 class="component-title">Gradient Button</h3>
+                        <div class="component-preview">
+                            <button class="btn btn-gradient">Gradient Button</button>
+                            <button class="btn btn-gradient btn-large">Large Gradient</button>
+                            <button class="btn btn-gradient btn-small">Small</button>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="gradient-tabs" id="gradient-html" checked>
+                            <input type="radio" name="gradient-tabs" id="gradient-css">
+                            <div class="tab-labels">
+                                <label for="gradient-html" class="tab-label">HTML</label>
+                                <label for="gradient-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;button class="btn btn-gradient"&gt;Gradient Button&lt;/button&gt;
+&lt;button class="btn btn-gradient btn-large"&gt;Large Gradient&lt;/button&gt;
+&lt;button class="btn btn-gradient btn-small"&gt;Small&lt;/button&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.btn-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  background-size: 300% 300%;
+  color: white;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards Section -->
+                <div id="cards" class="style-section">
+                    <div class="section-header">
+                        <h1>🃏 Cards</h1>
+                        <p class="section-description">Beautiful card components for displaying content with various
+                            styles and layouts.</p>
+                    </div>
+
+                    <!-- Basic Card -->
+                    <div class="component-card" id="basic-card">
+                        <h3 class="component-title">Basic Card</h3>
+                        <div class="component-preview">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Card Title</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>This is a basic card with some content. Cards are great for organizing
+                                        information.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-primary btn-small">Action</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="basic-card-tabs" id="basic-card-html" checked>
+                            <input type="radio" name="basic-card-tabs" id="basic-card-css">
+                            <div class="tab-labels">
+                                <label for="basic-card-html" class="tab-label">HTML</label>
+                                <label for="basic-card-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;h4&gt;Card Title&lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p&gt;This is a basic card with some content.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;button class="btn btn-primary btn-small"&gt;Action&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header, .card-body, .card-footer {
+  padding: 16px;
+}
+
+.card-header {
+  border-bottom: 1px solid var(--border-color);
+  background: var(--card-header-bg);
+}
+
+.card-footer {
+  border-top: 1px solid var(--border-color);
+  background: var(--card-footer-bg);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="component-divider">
+
+                        <!-- Image Card -->
+                        <div class="component-card" id="image-card">
+                            <h3 class="component-title">Image Card</h3>
+                            <div class="component-preview">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <div
+                                            style="width: 100%; height: 150px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;">
+                                            Image Placeholder</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4>Beautiful Landscape</h4>
+                                        <p>A stunning view of mountains and valleys captured at sunset.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-outline btn-small">View</button>
+                                        <button class="btn btn-primary btn-small">Download</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="code-tabs">
+                                <input type="radio" name="image-card-tabs" id="image-card-html" checked>
+                                <input type="radio" name="image-card-tabs" id="image-card-css">
+                                <div class="tab-labels">
+                                    <label for="image-card-html" class="tab-label">HTML</label>
+                                    <label for="image-card-css" class="tab-label">CSS</label>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-panel">
+                                        <pre class="code-block"><code>&lt;div class="card"&gt;
+  &lt;div class="card-image"&gt;
+    &lt;img src="image.jpg" alt="Beautiful Landscape"&gt;
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h4&gt;Beautiful Landscape&lt;/h4&gt;
+    &lt;p&gt;A stunning view of mountains and valleys.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;button class="btn btn-outline btn-small"&gt;View&lt;/button&gt;
+    &lt;button class="btn btn-primary btn-small"&gt;Download&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                    </div>
+                                    <div class="tab-panel">
+                                        <pre class="code-block"><code>.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="component-divider">
+
+                        <!-- Profile Card -->
+                        <div class="component-card" id="profile-card">
+                            <h3 class="component-title">Profile Card</h3>
+                            <div class="component-preview">
+                                <div class="card profile-card">
+                                    <div class="profile-header">
+                                        <div class="profile-avatar">
+                                            <div
+                                                style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: 600;">
+                                                JD</div>
+                                        </div>
+                                        <div class="profile-info">
+                                            <h4>John Doe</h4>
+                                            <p class="profile-role">Frontend Developer</p>
+                                            <p class="profile-location">📍 San Francisco, CA</p>
+                                        </div>
+                                    </div>
+                                    <div class="profile-stats">
+                                        <div class="stat">
+                                            <span class="stat-number">127</span>
+                                            <span class="stat-label">Projects</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-number">2.4k</span>
+                                            <span class="stat-label">Followers</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-number">1.8k</span>
+                                            <span class="stat-label">Following</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-primary">Follow</button>
+                                        <button class="btn btn-outline">Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="code-tabs">
+                                <input type="radio" name="profile-card-tabs" id="profile-card-html" checked>
+                                <input type="radio" name="profile-card-tabs" id="profile-card-css">
+                                <div class="tab-labels">
+                                    <label for="profile-card-html" class="tab-label">HTML</label>
+                                    <label for="profile-card-css" class="tab-label">CSS</label>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-panel">
+                                        <pre class="code-block"><code>&lt;div class="card profile-card"&gt;
+  &lt;div class="profile-header"&gt;
+    &lt;div class="profile-avatar"&gt;
+      &lt;img src="avatar.jpg" alt="John Doe"&gt;
+    &lt;/div&gt;
+    &lt;div class="profile-info"&gt;
+      &lt;h4&gt;John Doe&lt;/h4&gt;
+      &lt;p class="profile-role"&gt;Frontend Developer&lt;/p&gt;
+      &lt;p class="profile-location"&gt;📍 San Francisco, CA&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="profile-stats"&gt;
+    &lt;div class="stat"&gt;
+      &lt;span class="stat-number"&gt;127&lt;/span&gt;
+      &lt;span class="stat-label"&gt;Projects&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                    </div>
+                                    <div class="tab-panel">
+                                        <pre class="code-block"><code>.profile-card {
+  text-align: center;
+  max-width: 280px;
+}
+
+.profile-header {
+  padding: 24px 16px 16px;
+}
+
+.profile-avatar {
+  margin-bottom: 16px;
+}
+
+.profile-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.profile-info h4 {
+  margin-bottom: 4px;
+  color: var(--text-color);
+}
+
+.profile-role {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.profile-location {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animations Section -->
+                <div id="animations" class="style-section">
+                    <div class="section-header">
+                        <h1>✨ Animations</h1>
+                        <p class="section-description">Eye-catching CSS animations to bring your components to life.</p>
+                    </div>
+
+                    <!-- Bounce Animation -->
+                    <div class="component-card" id="bounce-animation">
+                        <h3 class="component-title">Bounce Animation</h3>
+                        <div class="component-preview">
+                            <div class="animation-demo bounce-demo">Bounce Me!</div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="bounce-tabs" id="bounce-html" checked>
+                            <input type="radio" name="bounce-tabs" id="bounce-css">
+                            <div class="tab-labels">
+                                <label for="bounce-html" class="tab-label">HTML</label>
+                                <label for="bounce-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre
+                                        class="code-block"><code>&lt;div class="bounce-demo"&gt;Bounce Me!&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.bounce-demo {
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Pulse Animation -->
+                    <div class="component-card" id="pulse-animation">
+                        <h3 class="component-title">Pulse Animation</h3>
+                        <div class="component-preview">
+                            <div class="animation-demo pulse-demo">Pulse Effect</div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="pulse-tabs" id="pulse-html" checked>
+                            <input type="radio" name="pulse-tabs" id="pulse-css">
+                            <div class="tab-labels">
+                                <label for="pulse-html" class="tab-label">HTML</label>
+                                <label for="pulse-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre
+                                        class="code-block"><code>&lt;div class="pulse-demo"&gt;Pulse Effect&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.pulse-demo {
+  padding: 20px 40px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  border-radius: 50px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Rotate Animation -->
+                    <div class="component-card" id="rotate-animation">
+                        <h3 class="component-title">Rotate Animation</h3>
+                        <div class="component-preview">
+                            <div class="animation-demo rotate-demo">🔄</div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="rotate-tabs" id="rotate-html" checked>
+                            <input type="radio" name="rotate-tabs" id="rotate-css">
+                            <div class="tab-labels">
+                                <label for="rotate-html" class="tab-label">HTML</label>
+                                <label for="rotate-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre
+                                        class="code-block"><code>&lt;div class="rotate-demo"&gt;🔄&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.rotate-demo {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bars Section -->
+                <div id="progress" class="style-section">
+                    <div class="section-header">
+                        <h1>📈 Progress Bars</h1>
+                        <p class="section-description">Beautiful progress indicators for showing completion status.</p>
+                    </div>
+
+                    <!-- Linear Progress -->
+                    <div class="component-card" id="linear-progress">
+                        <h3 class="component-title">Linear Progress Bar</h3>
+                        <div class="component-preview">
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="linear-progress-tabs" id="linear-progress-html" checked>
+                            <input type="radio" name="linear-progress-tabs" id="linear-progress-css">
+                            <div class="tab-labels">
+                                <label for="linear-progress-html" class="tab-label">HTML</label>
+                                <label for="linear-progress-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="progress-container"&gt;
+  &lt;div class="progress-bar" style="width: 75%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Circular Progress -->
+                    <div class="component-card" id="circular-progress">
+                        <h3 class="component-title">Circular Progress</h3>
+                        <div class="component-preview">
+                            <div class="circular-progress" data-percentage="75">
+                                <div class="progress-text">75%</div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="circular-progress-tabs" id="circular-progress-html" checked>
+                            <input type="radio" name="circular-progress-tabs" id="circular-progress-css">
+                            <div class="tab-labels">
+                                <label for="circular-progress-html" class="tab-label">HTML</label>
+                                <label for="circular-progress-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="circular-progress" data-percentage="75"&gt;
+  &lt;div class="progress-text"&gt;75%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.circular-progress {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--primary-color) 0deg,
+    var(--primary-color) calc(75 * 3.6deg),
+    var(--border-color) calc(75 * 3.6deg),
+    var(--border-color) 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circular-progress::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  position: absolute;
+}
+
+.progress-text {
+  font-weight: 600;
+  font-size: 18px;
+  z-index: 1;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tooltips Section -->
+                <div id="tooltips" class="style-section">
+                    <div class="section-header">
+                        <h1>💬 Tooltips</h1>
+                        <p class="section-description">Helpful tooltips to provide additional information on hover.</p>
+                    </div>
+
+                    <!-- Basic Tooltip -->
+                    <div class="component-card" id="basic-tooltip">
+                        <h3 class="component-title">Basic Tooltip</h3>
+                        <div class="component-preview">
+                            <button class="btn btn-primary tooltip-trigger" data-tooltip="This is a helpful tooltip!">
+                                Hover for tooltip
+                            </button>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="tooltip-tabs" id="tooltip-html" checked>
+                            <input type="radio" name="tooltip-tabs" id="tooltip-css">
+                            <div class="tab-labels">
+                                <label for="tooltip-html" class="tab-label">HTML</label>
+                                <label for="tooltip-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;button class="btn btn-primary tooltip-trigger" data-tooltip="This is a helpful tooltip!"&gt;
+  Hover for tooltip
+&lt;/button&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.tooltip-trigger {
+  position: relative;
+}
+
+.tooltip-trigger::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-color);
+  color: var(--bg-primary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.tooltip-trigger::after {
+  content: '';
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--text-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.tooltip-trigger:hover::before,
+.tooltip-trigger:hover::after {
+  opacity: 1;
+  visibility: visible;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggles Section -->
+                <div id="toggles" class="style-section">
+                    <div class="section-header">
+                        <h1>🔄 Toggles</h1>
+                        <p class="section-description">Modern toggle switches for boolean inputs.</p>
+                    </div>
+
+                    <!-- Basic Toggle -->
+                    <div class="component-card" id="basic-toggle">
+                        <h3 class="component-title">Basic Toggle</h3>
+                        <div class="component-preview">
+                            <label class="toggle-switch">
+                                <input type="checkbox" class="toggle-input">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="toggle-tabs" id="toggle-html" checked>
+                            <input type="radio" name="toggle-tabs" id="toggle-css">
+                            <div class="tab-labels">
+                                <label for="toggle-html" class="tab-label">HTML</label>
+                                <label for="toggle-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;label class="toggle-switch"&gt;
+  &lt;input type="checkbox" class="toggle-input"&gt;
+  &lt;span class="toggle-slider"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-input:checked + .toggle-slider {
+  background-color: var(--primary-color);
+}
+
+.toggle-input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navbars Section -->
+                <div id="navbars" class="style-section">
+                    <div class="section-header">
+                        <h1>🧭 Navbars</h1>
+                        <p class="section-description">Modern navigation bars for your website header.</p>
+                    </div>
+
+                    <!-- Basic Navbar -->
+                    <div class="component-card" id="basic-navbar">
+                        <h3 class="component-title">Basic Navbar</h3>
+                        <div class="component-preview">
+                            <nav class="demo-navbar">
+                                <div class="demo-nav-brand">Brand</div>
+                                <ul class="demo-nav-links">
+                                    <li><a href="#" class="demo-nav-link">Home</a></li>
+                                    <li><a href="#" class="demo-nav-link">About</a></li>
+                                    <li><a href="#" class="demo-nav-link">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="navbar-tabs" id="navbar-html" checked>
+                            <input type="radio" name="navbar-tabs" id="navbar-css">
+                            <div class="tab-labels">
+                                <label for="navbar-html" class="tab-label">HTML</label>
+                                <label for="navbar-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;nav class="demo-navbar"&gt;
+  &lt;div class="demo-nav-brand"&gt;Brand&lt;/div&gt;
+  &lt;ul class="demo-nav-links"&gt;
+    &lt;li&gt;&lt;a href="#" class="demo-nav-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="demo-nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" class="demo-nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.demo-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.demo-nav-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.demo-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.demo-nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.demo-nav-link:hover {
+  color: var(--primary-color);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forms Section -->
+                <div id="forms" class="style-section">
+                    <div class="section-header">
+                        <h1>📝 Forms</h1>
+                        <p class="section-description">Beautiful form components for user input.</p>
+                    </div>
+
+                    <!-- Input Field -->
+                    <div class="component-card" id="input-field">
+                        <h3 class="component-title">Input Field</h3>
+                        <div class="component-preview">
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="input-tabs" id="input-html" checked>
+                            <input type="radio" name="input-tabs" id="input-css">
+                            <div class="tab-labels">
+                                <label for="input-html" class="tab-label">HTML</label>
+                                <label for="input-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" class="form-input" placeholder="Enter your email"&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loaders Section -->
+                <div id="loaders" class="style-section">
+                    <div class="section-header">
+                        <h1>⏳ Loaders</h1>
+                        <p class="section-description">Loading animations to indicate processing states.</p>
+                    </div>
+
+                    <!-- Spinner Loader -->
+                    <div class="component-card" id="spinner-loader">
+                        <h3 class="component-title">Spinner Loader</h3>
+                        <div class="component-preview">
+                            <div class="spinner-loader"></div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="spinner-tabs" id="spinner-html" checked>
+                            <input type="radio" name="spinner-tabs" id="spinner-css">
+                            <div class="tab-labels">
+                                <label for="spinner-html" class="tab-label">HTML</label>
+                                <label for="spinner-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre
+                                        class="code-block"><code>&lt;div class="spinner-loader"&gt;&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.spinner-loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Dots Loader -->
+                    <div class="component-card" id="dots-loader">
+                        <h3 class="component-title">Dots Loader</h3>
+                        <div class="component-preview">
+                            <div class="dots-loader">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="dots-tabs" id="dots-html" checked>
+                            <input type="radio" name="dots-tabs" id="dots-css">
+                            <div class="tab-labels">
+                                <label for="dots-html" class="tab-label">HTML</label>
+                                <label for="dots-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="dots-loader"&gt;
+  &lt;div class="dot"&gt;&lt;/div&gt;
+  &lt;div class="dot"&gt;&lt;/div&gt;
+  &lt;div class="dot"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.dots-loader {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: bounce-dots 1.4s ease-in-out infinite both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce-dots {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerts Section -->
+                <div id="alerts" class="style-section">
+                    <div class="section-header">
+                        <h1>⚠️ Alerts</h1>
+                        <p class="section-description">Alert messages for different notification types.</p>
+                    </div>
+
+                    <!-- Success Alert -->
+                    <div class="component-card" id="success-alert">
+                        <h3 class="component-title">Success Alert</h3>
+                        <div class="component-preview">
+                            <div class="alert alert-success">
+                                <span class="alert-icon">✅</span>
+                                <span class="alert-message">Success! Your action was completed.</span>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="success-alert-tabs" id="success-alert-html" checked>
+                            <input type="radio" name="success-alert-tabs" id="success-alert-css">
+                            <div class="tab-labels">
+                                <label for="success-alert-html" class="tab-label">HTML</label>
+                                <label for="success-alert-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="alert alert-success"&gt;
+  &lt;span class="alert-icon"&gt;✅&lt;/span&gt;
+  &lt;span class="alert-message"&gt;Success! Your action was completed.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.alert {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  gap: 12px;
+}
+
+.alert-success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #059669;
+}
+
+.alert-icon {
+  font-size: 16px;
+}
+
+.alert-message {
+  flex: 1;
+  font-weight: 500;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Error Alert -->
+                    <div class="component-card" id="error-alert">
+                        <h3 class="component-title">Error Alert</h3>
+                        <div class="component-preview">
+                            <div class="alert alert-error">
+                                <span class="alert-icon">❌</span>
+                                <span class="alert-message">Error! Something went wrong.</span>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="error-alert-tabs" id="error-alert-html" checked>
+                            <input type="radio" name="error-alert-tabs" id="error-alert-css">
+                            <div class="tab-labels">
+                                <label for="error-alert-html" class="tab-label">HTML</label>
+                                <label for="error-alert-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="alert alert-error"&gt;
+  &lt;span class="alert-icon"&gt;❌&lt;/span&gt;
+  &lt;span class="alert-message"&gt;Error! Something went wrong.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.alert-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modals Section -->
+                <div id="modals" class="style-section">
+                    <div class="section-header">
+                        <h1>🪟 Modals</h1>
+                        <p class="section-description">Modal dialogs for displaying content in overlay.</p>
+                    </div>
+
+                    <!-- Basic Modal -->
+                    <div class="component-card" id="basic-modal">
+                        <h3 class="component-title">Basic Modal</h3>
+                        <div class="component-preview">
+                            <button class="btn btn-primary" onclick="openModal()">Open Modal</button>
+                            <div class="modal-overlay" id="modalOverlay" style="display: none;">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4>Modal Title</h4>
+                                        <button class="modal-close" onclick="closeModal()">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>This is the modal content. You can put any content here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+                                        <button class="btn btn-primary">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="modal-tabs" id="modal-html" checked>
+                            <input type="radio" name="modal-tabs" id="modal-css">
+                            <div class="tab-labels">
+                                <label for="modal-html" class="tab-label">HTML</label>
+                                <label for="modal-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;button class="btn btn-primary" onclick="openModal()"&gt;Open Modal&lt;/button&gt;
+&lt;div class="modal-overlay" id="modalOverlay"&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h4&gt;Modal Title&lt;/h4&gt;
+      &lt;button class="modal-close" onclick="closeModal()"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;This is the modal content.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn btn-outline"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges Section -->
+                <div id="badges" class="style-section">
+                    <div class="section-header">
+                        <h1>🏷️ Badges</h1>
+                        <p class="section-description">Small status indicators and labels.</p>
+                    </div>
+
+                    <!-- Basic Badge -->
+                    <div class="component-card" id="basic-badge">
+                        <h3 class="component-title">Basic Badge</h3>
+                        <div class="component-preview">
+                            <span class="badge badge-primary">Primary</span>
+                            <span class="badge badge-success">Success</span>
+                            <span class="badge badge-warning">Warning</span>
+                            <span class="badge badge-error">Error</span>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="badge-tabs" id="badge-html" checked>
+                            <input type="radio" name="badge-tabs" id="badge-css">
+                            <div class="tab-labels">
+                                <label for="badge-html" class="tab-label">HTML</label>
+                                <label for="badge-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="badge badge-error"&gt;Error&lt;/span&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.badge-success {
+  background: #10b981;
+  color: white;
+}
+
+.badge-warning {
+  background: #f59e0b;
+  color: white;
+}
+
+.badge-error {
+  background: #ef4444;
+  color: white;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grids Section -->
+                <div id="grids" class="style-section">
+                    <div class="section-header">
+                        <h1>📊 Grids</h1>
+                        <p class="section-description">Flexible grid layouts for organizing content.</p>
+                    </div>
+
+                    <!-- CSS Grid -->
+                    <div class="component-card" id="css-grid">
+                        <h3 class="component-title">CSS Grid Layout</h3>
+                        <div class="component-preview">
+                            <div class="grid-container">
+                                <div class="grid-item">1</div>
+                                <div class="grid-item">2</div>
+                                <div class="grid-item">3</div>
+                                <div class="grid-item">4</div>
+                                <div class="grid-item">5</div>
+                                <div class="grid-item">6</div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="grid-tabs" id="grid-html" checked>
+                            <input type="radio" name="grid-tabs" id="grid-css">
+                            <div class="tab-labels">
+                                <label for="grid-html" class="tab-label">HTML</label>
+                                <label for="grid-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-item"&gt;1&lt;/div&gt;
+  &lt;div class="grid-item"&gt;2&lt;/div&gt;
+  &lt;div class="grid-item"&gt;3&lt;/div&gt;
+  &lt;div class="grid-item"&gt;4&lt;/div&gt;
+  &lt;div class="grid-item"&gt;5&lt;/div&gt;
+  &lt;div class="grid-item"&gt;6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.grid-item {
+  background: var(--primary-color);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footers Section -->
+                <div id="footers" class="style-section">
+                    <div class="section-header">
+                        <h1>🦶 Footers</h1>
+                        <p class="section-description">Footer components for website bottom sections.</p>
+                    </div>
+
+                    <!-- Simple Footer -->
+                    <div class="component-card" id="simple-footer">
+                        <h3 class="component-title">Simple Footer</h3>
+                        <div class="component-preview">
+                            <footer class="demo-footer">
+                                <div class="demo-footer-content">
+                                    <div class="demo-footer-section">
+                                        <h4>Company</h4>
+                                        <ul>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="demo-footer-section">
+                                        <h4>Resources</h4>
+                                        <ul>
+                                            <li><a href="#">Documentation</a></li>
+                                            <li><a href="#">Support</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="demo-footer-bottom">
+                                    <p>&copy; 2024 Company Name. All rights reserved.</p>
+                                </div>
+                            </footer>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="footer-tabs" id="footer-html" checked>
+                            <input type="radio" name="footer-tabs" id="footer-css">
+                            <div class="tab-labels">
+                                <label for="footer-html" class="tab-label">HTML</label>
+                                <label for="footer-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;footer class="demo-footer"&gt;
+  &lt;div class="demo-footer-content"&gt;
+    &lt;div class="demo-footer-section"&gt;
+      &lt;h4&gt;Company&lt;/h4&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="demo-footer-bottom"&gt;
+    &lt;p&gt;&copy; 2024 Company Name. All rights reserved.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.demo-footer {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.demo-footer-content {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.demo-footer-section h4 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.demo-footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.demo-footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.demo-footer-section a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.demo-footer-section a:hover {
+  color: var(--primary-color);
+}
+
+.demo-footer-bottom {
+  background: var(--border-color);
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs Section -->
+                <div id="tabs" class="style-section">
+                    <div class="section-header">
+                        <h1>📑 Tabs</h1>
+                        <p class="section-description">Tabbed navigation for organizing content.</p>
+                    </div>
+
+                    <!-- Basic Tabs -->
+                    <div class="component-card" id="basic-tabs">
+                        <h3 class="component-title">Basic Tabs</h3>
+                        <div class="component-preview">
+                            <div class="tabs-container">
+                                <div class="tabs-nav">
+                                    <button class="tab-button active" onclick="showTab(event, 'tab1')">Tab 1</button>
+                                    <button class="tab-button" onclick="showTab(event, 'tab2')">Tab 2</button>
+                                    <button class="tab-button" onclick="showTab(event, 'tab3')">Tab 3</button>
+                                </div>
+                                <div class="tabs-content">
+                                    <div id="tab1" class="tab-pane active">Content for Tab 1</div>
+                                    <div id="tab2" class="tab-pane">Content for Tab 2</div>
+                                    <div id="tab3" class="tab-pane">Content for Tab 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="tabs-tabs" id="tabs-html" checked>
+                            <input type="radio" name="tabs-tabs" id="tabs-css">
+                            <div class="tab-labels">
+                                <label for="tabs-html" class="tab-label">HTML</label>
+                                <label for="tabs-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="tabs-container"&gt;
+  &lt;div class="tabs-nav"&gt;
+    &lt;button class="tab-button active"&gt;Tab 1&lt;/button&gt;
+    &lt;button class="tab-button"&gt;Tab 2&lt;/button&gt;
+    &lt;button class="tab-button"&gt;Tab 3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="tabs-content"&gt;
+    &lt;div class="tab-pane active"&gt;Content for Tab 1&lt;/div&gt;
+    &lt;div class="tab-pane"&gt;Content for Tab 2&lt;/div&gt;
+    &lt;div class="tab-pane"&gt;Content for Tab 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.tabs-container {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabs-nav {
+  display: flex;
+  background: var(--card-header-bg);
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  background: var(--hover-bg);
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tabs-content {
+  padding: 20px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordions Section -->
+                <div id="accordions" class="style-section">
+                    <div class="section-header">
+                        <h1>📋 Accordions</h1>
+                        <p class="section-description">Collapsible content sections.</p>
+                    </div>
+
+                    <!-- Basic Accordion -->
+                    <div class="component-card" id="basic-accordion">
+                        <h3 class="component-title">Basic Accordion</h3>
+                        <div class="component-preview">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                                        <span>Section 1</span>
+                                        <span class="accordion-icon">+</span>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p>Content for section 1. This can contain any HTML content.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                                        <span>Section 2</span>
+                                        <span class="accordion-icon">+</span>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p>Content for section 2. This section is also collapsible.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="accordion-tabs" id="accordion-html" checked>
+                            <input type="radio" name="accordion-tabs" id="accordion-css">
+                            <div class="tab-labels">
+                                <label for="accordion-html" class="tab-label">HTML</label>
+                                <label for="accordion-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="accordion"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;div class="accordion-header"&gt;
+      &lt;span&gt;Section 1&lt;/span&gt;
+      &lt;span class="accordion-icon"&gt;+&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion-content"&gt;
+      &lt;p&gt;Content for section 1.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.accordion {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--card-header-bg);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: var(--hover-bg);
+}
+
+.accordion-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+  max-height: 200px;
+  padding: 16px;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdowns Section -->
+                <div id="dropdowns" class="style-section">
+                    <div class="section-header">
+                        <h1>📋 Dropdowns</h1>
+                        <p class="section-description">Dropdown menus for navigation and selection.</p>
+                    </div>
+
+                    <!-- Basic Dropdown -->
+                    <div class="component-card" id="basic-dropdown">
+                        <h3 class="component-title">Basic Dropdown</h3>
+                        <div class="component-preview">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                                    Dropdown Menu
+                                    <span class="dropdown-arrow">▼</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Option 1</a>
+                                    <a href="#" class="dropdown-item">Option 2</a>
+                                    <a href="#" class="dropdown-item">Option 3</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">Separated Option</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="dropdown-tabs" id="dropdown-html" checked>
+                            <input type="radio" name="dropdown-tabs" id="dropdown-css">
+                            <div class="tab-labels">
+                                <label for="dropdown-html" class="tab-label">HTML</label>
+                                <label for="dropdown-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="dropdown"&gt;
+  &lt;button class="dropdown-toggle"&gt;
+    Dropdown Menu
+    &lt;span class="dropdown-arrow"&gt;▼&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="dropdown-menu"&gt;
+    &lt;a href="#" class="dropdown-item"&gt;Option 1&lt;/a&gt;
+    &lt;a href="#" class="dropdown-item"&gt;Option 2&lt;/a&gt;
+    &lt;a href="#" class="dropdown-item"&gt;Option 3&lt;/a&gt;
+    &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+    &lt;a href="#" class="dropdown-item"&gt;Separated Option&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background: var(--hover-bg);
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: var(--hover-bg);
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 8px 0;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sliders Section -->
+                <div id="sliders" class="style-section">
+                    <div class="section-header">
+                        <h1>🎚️ Sliders</h1>
+                        <p class="section-description">Range sliders for numeric input selection.</p>
+                    </div>
+
+                    <!-- Basic Slider -->
+                    <div class="component-card" id="basic-slider">
+                        <h3 class="component-title">Basic Slider</h3>
+                        <div class="component-preview">
+                            <div class="slider-container">
+                                <label class="slider-label">Volume: <span id="sliderValue">50</span>%</label>
+                                <input type="range" class="slider" min="0" max="100" value="50"
+                                    oninput="updateSliderValue(this)">
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="slider-tabs" id="slider-html" checked>
+                            <input type="radio" name="slider-tabs" id="slider-css">
+                            <div class="tab-labels">
+                                <label for="slider-html" class="tab-label">HTML</label>
+                                <label for="slider-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="slider-container"&gt;
+  &lt;label class="slider-label"&gt;Volume: &lt;span id="sliderValue"&gt;50&lt;/span&gt;%&lt;/label&gt;
+  &lt;input type="range" class="slider" min="0" max="100" value="50"&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.slider-container {
+  width: 100%;
+  max-width: 300px;
+}
+
+.slider-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border-color);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animations Section -->
+                <div id="animations" class="style-section">
+                    <div class="section-header">
+                        <h1>✨ Animations</h1>
+                        <p class="section-description">CSS animations to bring your components to life.</p>
+                    </div>
+
+                    <!-- Bounce Animation -->
+                    <div class="component-card" id="bounce-animation">
+                        <h3 class="component-title">Bounce Animation</h3>
+                        <div class="component-preview">
+                            <div class="bounce-demo">Bounce Me!</div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="bounce-tabs" id="bounce-html" checked>
+                            <input type="radio" name="bounce-tabs" id="bounce-css">
+                            <div class="tab-labels">
+                                <label for="bounce-html" class="tab-label">HTML</label>
+                                <label for="bounce-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre
+                                        class="code-block"><code>&lt;div class="bounce-demo"&gt;Bounce Me!&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.bounce-demo {
+  padding: 20px 40px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Pulse Animation -->
+                    <div class="component-card" id="pulse-animation">
+                        <h3 class="component-title">Pulse Animation</h3>
+                        <div class="component-preview">
+                            <div class="pulse-demo">Pulse Effect</div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="pulse-tabs" id="pulse-html" checked>
+                            <input type="radio" name="pulse-tabs" id="pulse-css">
+                            <div class="tab-labels">
+                                <label for="pulse-html" class="tab-label">HTML</label>
+                                <label for="pulse-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre
+                                        class="code-block"><code>&lt;div class="pulse-demo"&gt;Pulse Effect&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.pulse-demo {
+  padding: 20px 40px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Rotate Animation -->
+                    <div class="component-card" id="rotate-animation">
+                        <h3 class="component-title">Rotate Animation</h3>
+                        <div class="component-preview">
+                            <div class="rotate-demo">🔄</div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="rotate-tabs" id="rotate-html" checked>
+                            <input type="radio" name="rotate-tabs" id="rotate-css">
+                            <div class="tab-labels">
+                                <label for="rotate-html" class="tab-label">HTML</label>
+                                <label for="rotate-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre
+                                        class="code-block"><code>&lt;div class="rotate-demo"&gt;🔄&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.rotate-demo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: rotate 3s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tooltips Section -->
+                <div id="tooltips" class="style-section">
+                    <div class="section-header">
+                        <h1>💬 Tooltips</h1>
+                        <p class="section-description">Helpful tooltips to provide additional information on hover.</p>
+                    </div>
+
+                    <!-- Basic Tooltip -->
+                    <div class="component-card" id="basic-tooltip">
+                        <h3 class="component-title">Basic Tooltip</h3>
+                        <div class="component-preview">
+                            <div class="tooltip-container">
+                                <button class="btn btn-primary tooltip-trigger">Hover me
+                                    <span class="tooltip">This is a helpful tooltip!</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="tooltip-tabs" id="tooltip-html" checked>
+                            <input type="radio" name="tooltip-tabs" id="tooltip-css">
+                            <div class="tab-labels">
+                                <label for="tooltip-html" class="tab-label">HTML</label>
+                                <label for="tooltip-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="tooltip-container"&gt;
+  &lt;button class="btn btn-primary tooltip-trigger"&gt;Hover me
+    &lt;span class="tooltip"&gt;This is a helpful tooltip!&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-trigger {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200px;
+  background: var(--text-color);
+  color: var(--card-bg);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--text-color) transparent transparent transparent;
+}
+
+.tooltip-trigger:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bars Section -->
+                <div id="progress" class="style-section">
+                    <div class="section-header">
+                        <h1>📈 Progress Bars</h1>
+                        <p class="section-description">Progress indicators to show completion status.</p>
+                    </div>
+
+                    <!-- Linear Progress -->
+                    <div class="component-card" id="linear-progress">
+                        <h3 class="component-title">Linear Progress Bar</h3>
+                        <div class="component-preview">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-text">75%</span>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="linear-progress-tabs" id="linear-progress-html" checked>
+                            <input type="radio" name="linear-progress-tabs" id="linear-progress-css">
+                            <div class="tab-labels">
+                                <label for="linear-progress-html" class="tab-label">HTML</label>
+                                <label for="linear-progress-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="progress-container"&gt;
+  &lt;div class="progress-bar"&gt;
+    &lt;div class="progress-fill" style="width: 75%"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class="progress-text"&gt;75%&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), #764ba2);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  animation: progress-shimmer 2s infinite;
+}
+
+.progress-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+  min-width: 40px;
+}
+
+@keyframes progress-shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="component-divider">
+
+                    <!-- Circular Progress -->
+                    <div class="component-card" id="circular-progress">
+                        <h3 class="component-title">Circular Progress</h3>
+                        <div class="component-preview">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" width="80" height="80">
+                                    <circle class="progress-ring-circle" stroke="var(--primary-color)" stroke-width="4"
+                                        fill="transparent" r="36" cx="40" cy="40"
+                                        style="stroke-dasharray: 226.19; stroke-dashoffset: 56.55;" />
+                                </svg>
+                                <div class="progress-percentage">75%</div>
+                            </div>
+                        </div>
+                        <div class="code-tabs">
+                            <input type="radio" name="circular-progress-tabs" id="circular-progress-html" checked>
+                            <input type="radio" name="circular-progress-tabs" id="circular-progress-css">
+                            <div class="tab-labels">
+                                <label for="circular-progress-html" class="tab-label">HTML</label>
+                                <label for="circular-progress-css" class="tab-label">CSS</label>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>&lt;div class="circular-progress"&gt;
+  &lt;svg class="progress-ring" width="80" height="80"&gt;
+    &lt;circle class="progress-ring-circle" stroke="var(--primary-color)" 
+            stroke-width="4" fill="transparent" r="36" cx="40" cy="40"/&gt;
+  &lt;/svg&gt;
+  &lt;div class="progress-percentage"&gt;75%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <div class="tab-panel">
+                                    <pre class="code-block"><code>.circular-progress {
+  position: relative;
+  display: inline-block;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform-origin: 50% 50%;
+}
+
+.progress-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="sidebar-header">
+                <h3>🔍 Sub-Styles</h3>
+            </div>
+            <nav class="substyles-nav">
+                <ul class="substyles-list" id="substyles-list">
+                    <li><a href="#primary-button" class="substyle-link active">Primary</a></li>
+                    <li><a href="#outline-button" class="substyle-link">Outline</a></li>
+                    <li><a href="#ghost-button" class="substyle-link">Ghost</a></li>
+                    <li><a href="#gradient-button" class="substyle-link">Gradient</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Snippix</h4>
+                <p>A modern CSS component library for developers who love clean, reusable code snippets.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a title="Visit MDN For CSS styles" href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                            target="_blank">MDN Reference</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <div class="social-links">
+                    <a href="https://github.com/SAFAL-TIWARI/" target="_blank" class="social-link" title="GitHub">🐙</a>
+                    <a href="https://www.linkedin.com/in/safal-tiwari/" target="_blank" class="social-link"
+                        title="LinkedIn">💼</a>
+                    <a href="https://instagram.com/itz_safal_" target="_blank" class="social-link"
+                        title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Snippix. Made with ❤️ for developers.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
