@@ -3,11 +3,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/SAFAL-TIWARI/Snippix?style=social)](https://github.com/SAFAL-TIWARI/Snippix/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/SAFAL-TIWARI/Snippix?style=social)](https://github.com/SAFAL-TIWARI/Snippix/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/SAFAL-TIWARI/Snippix)](https://github.com/SAFAL-TIWARI/Snippix/issues)
-[![GitHub license](https://img.shields.io/github/license/SAFAL-TIWARI/Snippix)](https://github.com/SAFAL-TIWARI/Snippix/blob/main/LICENSE)
 
 > 🚀 A modern, responsive CSS component library with beautiful pre-built components and dark/light theme support.
 
 Snippix is a comprehensive collection of ready-to-use CSS components designed to help developers build beautiful web interfaces quickly and efficiently. With support for both dark and light themes, smooth animations, and modern design patterns, Snippix makes it easy to create stunning user interfaces.
+
+## 🎓 Program Information
+
+**Built under LetsUpgrade SAP Program** - This project was developed as part of the [LetsUpgrade](https://letsupgrade.in/) is India's largest higher education learning community for students enrolled in Indian degree programs. With 1.5 million students and a 45% market share among BTech / BE students in India; LetsUpgrade EdTech offers many upskilling courses in Tech, Design, Management, Business, and Data..
 
 ## ✨ Features
 
@@ -183,25 +186,12 @@ When adding new components:
 - Support both light and dark themes
 - Add appropriate documentation
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Inter Font**: Modern typography from Google Fonts
 - **JetBrains Mono**: Code font for syntax highlighting
 - **CSS Grid & Flexbox**: Modern layout techniques
 - **CSS Custom Properties**: For theming support
-
-## 📞 Support
-
-If you have any questions or need help:
-
-- 🐛 [Report Issues](https://github.com/SAFAL-TIWARI/Snippix/issues)
-- 💡 [Request Features](https://github.com/SAFAL-TIWARI/Snippix/issues/new)
-- 📧 Contact: [Your Email]
-- 🌐 Website: [Your Website]
 
 ## 🌟 Show Your Support
 
