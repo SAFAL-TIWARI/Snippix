@@ -184,12 +184,12 @@
                 <div class="tab-panel">
                   <pre class="code-block"><code>.btn-outline {
   background: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 2px solid #667eea;
+  color: #667eea;
 }
 
 .btn-outline:hover {
-  background: var(--primary-color);
+  background: #667eea;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
@@ -226,7 +226,7 @@
                   <pre class="code-block"><code>.btn-ghost {
   background: transparent;
   border: none;
-  color: var(--text-color);
+  color: #1a202c;
   position: relative;
 }
 
@@ -237,7 +237,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--hover-bg);
+  background: rgba(102, 126, 234, 0.1);
   border-radius: 8px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -346,7 +346,7 @@
                 </div>
                 <div class="tab-panel">
                   <pre class="code-block"><code>.card {
-  background: var(--card-bg);
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -364,13 +364,13 @@
 }
 
 .card-header {
-  border-bottom: 1px solid var(--border-color);
-  background: var(--card-header-bg);
+  border-bottom: 1px solid #e2e8f0;
+  background: #f7fafc;
 }
 
 .card-footer {
-  border-top: 1px solid var(--border-color);
-  background: var(--card-footer-bg);
+  border-top: 1px solid #e2e8f0;
+  background: #f7fafc;
 }</code></pre>
                 </div>
               </div>
@@ -535,22 +535,22 @@
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--primary-color);
+  border: 3px solid #667eea;
 }
 
 .profile-info h4 {
   margin-bottom: 4px;
-  color: var(--text-color);
+  color: #1a202c;
 }
 
 .profile-role {
-  color: var(--primary-color);
+  color: #667eea;
   font-weight: 500;
   margin-bottom: 4px;
 }
 
 .profile-location {
-  color: var(--text-secondary);
+  color: #4a5568;
   font-size: 14px;
 }
 
@@ -558,8 +558,8 @@
   display: flex;
   justify-content: space-around;
   padding: 16px;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .stat {
@@ -571,12 +571,12 @@
 .stat-number {
   font-size: 18px;
   font-weight: 600;
-  color: var(--text-color);
+  color: #1a202c;
 }
 
 .stat-label {
   font-size: 12px;
-  color: var(--text-secondary);
+  color: #4a5568;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }</code></pre>
@@ -762,14 +762,14 @@
                   <pre class="code-block"><code>.progress-container {
   width: 100%;
   height: 8px;
-  background-color: var(--border-color);
+  background-color: #e2e8f0;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #ededed 0%, #ededed 100%);
   border-radius: 4px;
   transition: width 0.3s ease;
   position: relative;
@@ -782,7 +782,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.953), transparent);
   animation: shimmer 2s infinite;
 }
 
@@ -824,10 +824,10 @@
   height: 120px;
   border-radius: 50%;
   background: conic-gradient(
-    var(--primary-color) 0deg,
-    var(--primary-color) calc(75 * 3.6deg),
-    var(--border-color) calc(75 * 3.6deg),
-    var(--border-color) 360deg
+    #667eea 0deg,
+    #667eea calc(75 * 3.6deg),
+    #e2e8f0 calc(75 * 3.6deg),
+    #e2e8f0 360deg
   );
   display: flex;
   align-items: center;
@@ -840,7 +840,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: var(--card-bg);
+  background: #ffffff;
   position: absolute;
 }
 
@@ -894,8 +894,8 @@
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--text-color);
-  color: var(--bg-primary);
+  background: #1a202c;
+  color: #ffffff;
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 12px;
@@ -913,7 +913,7 @@
   left: 50%;
   transform: translateX(-50%);
   border: 5px solid transparent;
-  border-top-color: var(--text-color);
+  border-top-color: #1a202c;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -981,7 +981,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--border-color);
+  background-color: #e2e8f0;
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -999,7 +999,7 @@
 }
 
 .toggle-input:checked + .toggle-slider {
-  background-color: var(--primary-color);
+  background-color: #667eea;
 }
 
 .toggle-input:checked + .toggle-slider:before {
@@ -1055,7 +1055,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: var(--card-bg);
+  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -1063,7 +1063,7 @@
 .demo-nav-brand {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #667eea;
 }
 
 .demo-nav-links {
@@ -1075,13 +1075,13 @@
 }
 
 .demo-nav-link {
-  color: var(--text-color);
+  color: #1a202c;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .demo-nav-link:hover {
-  color: var(--primary-color);
+  color: #667eea;
 }</code></pre>
                 </div>
               </div>
@@ -1128,23 +1128,23 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: var(--text-color);
+  color: #1a202c;
 }
 
 .form-input {
   width: 100%;
   padding: 12px 16px;
-  border: 2px solid var(--border-color);
+  border: 2px solid #e2e8f0;
   border-radius: 8px;
   font-size: 14px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background: var(--card-bg);
-  color: var(--text-color);
+  background: #ffffff;
+  color: #1a202c;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }</code></pre>
                 </div>
@@ -1181,8 +1181,8 @@
                   <pre class="code-block"><code>.spinner-loader {
   width: 40px;
   height: 40px;
-  border: 4px solid var(--border-color);
-  border-top: 4px solid var(--primary-color);
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #667eea;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -1233,7 +1233,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--primary-color);
+  background: #667eea;
   animation: bounce-dots 1.4s ease-in-out infinite both;
 }
 
@@ -1419,7 +1419,7 @@
 }
 
 .modal-content {
-  background: var(--card-bg);
+  background: #ffffff;
   border-radius: 12px;
   max-width: 500px;
   width: 90%;
@@ -1433,7 +1433,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .modal-close {
@@ -1441,7 +1441,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: var(--text-color);
+  color: #1a202c;
 }
 
 .modal-body {
@@ -1453,7 +1453,7 @@
   justify-content: flex-end;
   gap: 12px;
   padding: 20px;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid #e2e8f0;
 }</code></pre>
                 </div>
               </div>
@@ -1503,7 +1503,7 @@
 }
 
 .badge-primary {
-  background: var(--primary-color);
+  background: #667eea;
   color: white;
 }
 
@@ -1574,7 +1574,7 @@
 }
 
 .grid-item {
-  background: var(--primary-color);
+  background: #667eea;
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -1654,7 +1654,7 @@
                 </div>
                 <div class="tab-panel">
                   <pre class="code-block"><code>.demo-footer {
-  background: var(--card-bg);
+  background: #ffffff;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1667,7 +1667,7 @@
 
 .demo-footer-section h4 {
   margin-bottom: 1rem;
-  color: var(--text-color);
+  color: #1a202c;
 }
 
 .demo-footer-section ul {
@@ -1680,20 +1680,20 @@
 }
 
 .demo-footer-section a {
-  color: var(--text-secondary);
+  color: #4a5568;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .demo-footer-section a:hover {
-  color: var(--primary-color);
+  color: #667eea;
 }
 
 .demo-footer-bottom {
-  background: var(--border-color);
+  background: #e2e8f0;
   padding: 1rem 2rem;
   text-align: center;
-  color: var(--text-secondary);
+  color: #4a5568;
 }</code></pre>
                 </div>
               </div>
@@ -1749,14 +1749,14 @@
                 </div>
                 <div class="tab-panel">
                   <pre class="code-block"><code>.tabs-container {
-  border: 1px solid var(--border-color);
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .tabs-nav {
   display: flex;
-  background: var(--card-header-bg);
+  background: #f7fafc;
 }
 
 .tab-button {
@@ -1764,19 +1764,19 @@
   padding: 12px 16px;
   border: none;
   background: transparent;
-  color: var(--text-secondary);
+  color: #4a5568;
   cursor: pointer;
   transition: all 0.3s ease;
   border-bottom: 2px solid transparent;
 }
 
 .tab-button:hover {
-  background: var(--hover-bg);
+  background: rgba(102, 126, 234, 0.1);
 }
 
 .tab-button.active {
-  color: var(--primary-color);
-  border-bottom-color: var(--primary-color);
+  color: #667eea;
+  border-bottom-color: #667eea;
 }
 
 .tabs-content {
@@ -1851,13 +1851,13 @@
                 </div>
                 <div class="tab-panel">
                   <pre class="code-block"><code>.accordion {
-  border: 1px solid var(--border-color);
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .accordion-item {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .accordion-item:last-child {
@@ -1869,13 +1869,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  background: var(--card-header-bg);
+  background: #f7fafc;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .accordion-header:hover {
-  background: var(--hover-bg);
+  background: rgba(102, 126, 234, 0.1);
 }
 
 .accordion-icon {
@@ -1958,16 +1958,16 @@
   align-items: center;
   gap: 8px;
   padding: 12px 16px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  color: var(--text-color);
+  color: #1a202c;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .dropdown-toggle:hover {
-  background: var(--hover-bg);
+  background: rgba(102, 126, 234, 0.1);
 }
 
 .dropdown-arrow {
@@ -1980,8 +1980,8 @@
   top: 100%;
   left: 0;
   min-width: 200px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   opacity: 0;
@@ -2000,18 +2000,18 @@
 .dropdown-item {
   display: block;
   padding: 12px 16px;
-  color: var(--text-color);
+  color: #1a202c;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .dropdown-item:hover {
-  background: var(--hover-bg);
+  background: rgba(102, 126, 234, 0.1);
 }
 
 .dropdown-divider {
   height: 1px;
-  background: var(--border-color);
+  background: #e2e8f0;
   margin: 8px 0;
 }</code></pre>
                 </div>
@@ -2060,14 +2060,14 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: var(--text-color);
+  color: #1a202c;
 }
 
 .slider {
   width: 100%;
   height: 6px;
   border-radius: 3px;
-  background: var(--border-color);
+  background: #e2e8f0;
   outline: none;
   -webkit-appearance: none;
   appearance: none;
@@ -2079,7 +2079,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--primary-color);
+  background: #667eea;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: transform 0.2s ease;
@@ -2093,7 +2093,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--primary-color);
+  background: #667eea;
   cursor: pointer;
   border: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -2131,7 +2131,7 @@
                 <div class="tab-panel">
                   <pre class="code-block"><code>.bounce-demo {
   padding: 20px 40px;
-  background: var(--primary-color);
+  background: #667eea;
   color: white;
   border-radius: 8px;
   font-weight: 600;
@@ -2177,7 +2177,7 @@
                 <div class="tab-panel">
                   <pre class="code-block"><code>.pulse-demo {
   padding: 20px 40px;
-  background: var(--primary-color);
+  background: #667eea;
   color: white;
   border-radius: 8px;
   font-weight: 600;
@@ -2231,8 +2231,8 @@
   align-items: center;
   justify-content: center;
   font-size: 30px;
-  background: var(--card-bg);
-  border: 2px solid var(--primary-color);
+  background: #ffffff;
+  border: 2px solid #667eea;
   border-radius: 50%;
   animation: rotate 3s linear infinite;
   cursor: pointer;
@@ -2297,8 +2297,8 @@
 .tooltip {
   visibility: hidden;
   width: 200px;
-  background: var(--text-color);
-  color: var(--card-bg);
+  background: #1a202c;
+  color: #ffffff;
   text-align: center;
   border-radius: 6px;
   padding: 8px 12px;
@@ -2321,7 +2321,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: var(--text-color) transparent transparent transparent;
+  border-color: #1a202c transparent transparent transparent;
 }
 
 .tooltip-trigger:hover .tooltip {
@@ -2380,14 +2380,14 @@
 .progress-bar {
   flex: 1;
   height: 8px;
-  background: var(--border-color);
+  background: #e2e8f0;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), #764ba2);
+  background: linear-gradient(90deg, #667eea, #764ba2);
   border-radius: 4px;
   transition: width 0.3s ease;
   animation: progress-shimmer 2s infinite;
@@ -2396,7 +2396,7 @@
 .progress-text {
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-color);
+  color: #1a202c;
   min-width: 40px;
 }
 
@@ -2412,36 +2412,36 @@
           <hr class="component-divider">
 
           <!-- Circular Progress -->
-          <div class="component-card" id="circular-progress">
-            <h3 class="component-title">Circular Progress</h3>
+          <div class="component-card" id="circular-progress-svg">
+            <h3 class="component-title">Circular Progress (SVG)</h3>
             <div class="component-preview">
-              <div class="circular-progress">
+              <div class="circular-progress-svg">
                 <svg class="progress-ring" width="80" height="80">
-                  <circle class="progress-ring-circle" stroke="var(--primary-color)" stroke-width="4" fill="transparent"
-                    r="36" cx="40" cy="40" style="stroke-dasharray: 226.19; stroke-dashoffset: 56.55;" />
+                  <circle class="progress-ring-circle" stroke="#667eea" stroke-width="4" fill="transparent" r="36"
+                    cx="40" cy="40" style="stroke-dasharray: 226.19; stroke-dashoffset: 56.55;" />
                 </svg>
                 <div class="progress-percentage">75%</div>
               </div>
             </div>
             <div class="code-tabs">
-              <input type="radio" name="circular-progress-tabs" id="circular-progress-html" checked>
-              <input type="radio" name="circular-progress-tabs" id="circular-progress-css">
+              <input type="radio" name="circular-progress-svg-tabs" id="circular-progress-svg-html" checked>
+              <input type="radio" name="circular-progress-svg-tabs" id="circular-progress-svg-css">
               <div class="tab-labels">
-                <label for="circular-progress-html" class="tab-label">HTML</label>
-                <label for="circular-progress-css" class="tab-label">CSS</label>
+                <label for="circular-progress-svg-html" class="tab-label">HTML</label>
+                <label for="circular-progress-svg-css" class="tab-label">CSS</label>
               </div>
               <div class="tab-content">
                 <div class="tab-panel">
-                  <pre class="code-block"><code>&lt;div class="circular-progress"&gt;
+                  <pre class="code-block"><code>&lt;div class="circular-progress-svg"&gt;
   &lt;svg class="progress-ring" width="80" height="80"&gt;
-    &lt;circle class="progress-ring-circle" stroke="var(--primary-color)" 
+    &lt;circle class="progress-ring-circle" stroke="#667eea" 
             stroke-width="4" fill="transparent" r="36" cx="40" cy="40"/&gt;
   &lt;/svg&gt;
   &lt;div class="progress-percentage"&gt;75%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
                 <div class="tab-panel">
-                  <pre class="code-block"><code>.circular-progress {
+                  <pre class="code-block"><code>.circular-progress-svg {
   position: relative;
   display: inline-block;
 }
@@ -2462,7 +2462,7 @@
   transform: translate(-50%, -50%);
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-color);
+  color: #1a202c;
 }</code></pre>
                 </div>
               </div>

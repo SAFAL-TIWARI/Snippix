@@ -460,6 +460,33 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize search (uncomment to enable)
     // initializeSearch();
 
+    // Initialize circular progress bars
+    function initializeCircularProgress() {
+        const circularProgressBars = document.querySelectorAll('.circular-progress[data-percentage]');
+        
+        circularProgressBars.forEach(progressBar => {
+            const percentage = progressBar.getAttribute('data-percentage') || 0;
+            const progressText = progressBar.querySelector('.progress-text');
+            
+            // Set CSS custom property for the progress value
+            progressBar.style.setProperty('--progress-value', percentage);
+            
+            // Update text content if it exists
+            if (progressText) {
+                progressText.textContent = percentage + '%';
+            }
+            
+            // Add animation effect
+            progressBar.style.setProperty('--progress-value', 0);
+            setTimeout(() => {
+                progressBar.style.transition = 'all 0.8s ease-in-out';
+                progressBar.style.setProperty('--progress-value', percentage);
+            }, 100);
+        });
+    }
+
+    initializeCircularProgress();
+
     console.log('Snippix initialized successfully! 🎉');
 });
 

@@ -1379,7 +1379,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.875), transparent);
     animation: shimmer 2s infinite;
 }
 
@@ -1394,18 +1394,28 @@ html {
 }
 
 .circular-progress {
+    --progress-value: 0;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: conic-gradient(var(--primary-color) 0deg,
-            var(--primary-color) calc(75 * 3.6deg),
-            var(--border-color) calc(75 * 3.6deg),
-            var(--border-color) 360deg);
+    background: conic-gradient(
+        var(--primary-color) 0deg,
+        var(--primary-color) calc(var(--progress-value) * 3.6deg),
+        var(--border-color) calc(var(--progress-value) * 3.6deg),
+        var(--border-color) 360deg
+    );
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: 20px auto;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-progress:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px var(--shadow-color);
 }
 
 .circular-progress::before {
@@ -1415,13 +1425,15 @@ html {
     border-radius: 50%;
     background: var(--card-bg);
     position: absolute;
+    z-index: 1;
 }
 
 .progress-text {
     font-weight: 600;
     font-size: 18px;
-    z-index: 1;
+    z-index: 2;
     color: var(--text-color);
+    position: relative;
 }
 
 /* Tooltip Components */
@@ -2208,7 +2220,7 @@ html {
     }
 }
 
-.circular-progress {
+.circular-progress-svg {
     position: relative;
     display: inline-block;
     margin: 20px;
