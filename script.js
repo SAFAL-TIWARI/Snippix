@@ -1,29 +1,42 @@
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', function () {
     const themeSwitch = document.getElementById('theme-switch');
+    const mobileThemeSwitch = document.getElementById('mobile-theme-switch');
     const html = document.documentElement;
 
     // Check for saved theme preference or default to dark
     const savedTheme = localStorage.getItem('theme') || 'dark';
 
-    if (savedTheme === 'light') {
-        html.classList.remove('dark-theme');
-        themeSwitch.checked = true;
-    } else {
-        html.classList.add('dark-theme');
-        themeSwitch.checked = false;
-    }
-
-    // Theme switch event listener
-    themeSwitch.addEventListener('change', function () {
-        if (this.checked) {
+    function updateTheme(isLight) {
+        if (isLight) {
             html.classList.remove('dark-theme');
             localStorage.setItem('theme', 'light');
         } else {
             html.classList.add('dark-theme');
             localStorage.setItem('theme', 'dark');
         }
-    });
+        
+        // Sync both toggles
+        if (themeSwitch) themeSwitch.checked = isLight;
+        if (mobileThemeSwitch) mobileThemeSwitch.checked = isLight;
+    }
+
+    // Initialize theme
+    updateTheme(savedTheme === 'light');
+
+    // Desktop theme switch event listener
+    if (themeSwitch) {
+        themeSwitch.addEventListener('change', function () {
+            updateTheme(this.checked);
+        });
+    }
+
+    // Mobile theme switch event listener
+    if (mobileThemeSwitch) {
+        mobileThemeSwitch.addEventListener('change', function () {
+            updateTheme(this.checked);
+        });
+    }
 
     // Style Navigation Functionality
     const styleLinks = document.querySelectorAll('.style-link');
@@ -224,12 +237,66 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add scroll spy listener
     centerContent.addEventListener('scroll', updateActiveSubstyle);
 
-    // Mobile Menu Toggle (for future mobile implementation)
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    if (mobileMenuToggle) {
+    // Mobile Menu Toggle Functionality
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNavMenu = document.getElementById('mobileNavMenu');
+    
+    if (mobileMenuToggle && mobileNavMenu) {
         mobileMenuToggle.addEventListener('click', function () {
-            // Mobile menu functionality can be added here
-            console.log('Mobile menu clicked');
+            // Toggle menu visibility
+            mobileNavMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.mobile-nav-controls') && !e.target.closest('.mobile-nav-menu')) {
+                mobileNavMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu on window resize if screen becomes larger
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                mobileNavMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            }
+        });
+    }
+
+    // Mobile Sidebar Toggle Functionality
+    const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+    const mobileSidebarOverlay = document.getElementById('mobileSidebarOverlay');
+    const rightSidebar = document.querySelector('.right-sidebar');
+
+    if (mobileSidebarToggle && mobileSidebarOverlay && rightSidebar) {
+        // Toggle sidebar when button is clicked
+        mobileSidebarToggle.addEventListener('click', function () {
+            rightSidebar.classList.toggle('active');
+            mobileSidebarOverlay.classList.toggle('active');
+        });
+
+        // Close sidebar when overlay is clicked
+        mobileSidebarOverlay.addEventListener('click', function () {
+            rightSidebar.classList.remove('active');
+            mobileSidebarOverlay.classList.remove('active');
+        });
+
+        // Close sidebar when a substyle link is clicked (for better UX)
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('substyle-link') && window.innerWidth <= 768) {
+                rightSidebar.classList.remove('active');
+                mobileSidebarOverlay.classList.remove('active');
+            }
+        });
+
+        // Close sidebar on window resize if screen becomes larger
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                rightSidebar.classList.remove('active');
+                mobileSidebarOverlay.classList.remove('active');
+            }
         });
     }
 
@@ -312,7 +379,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Press 'T' to toggle theme
         if (e.key === 't' || e.key === 'T') {
             if (!e.target.matches('input, textarea')) {
-                themeSwitch.click();
+                const currentTheme = localStorage.getItem('theme') || 'dark';
+                updateTheme(currentTheme === 'dark');
             }
         }
 
