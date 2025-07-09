@@ -1,8 +1,8 @@
 # 🎨 Snippix - CSS Component Library
 
-[![GitHub stars](https://img.shields.io/github/stars/SAFAL-TIWARI/Snippix?style=social)](https://github.com/SAFAL-TIWARI/Snippix/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/SAFAL-TIWARI/Snippix?style=social)](https://github.com/SAFAL-TIWARI/Snippix/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/SAFAL-TIWARI/Snippix)](https://github.com/SAFAL-TIWARI/Snippix/issues)
+[![GitHub stars](https://img.shields.io/github/stars/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint?style=social)](https://github.com/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint?style=social)](https://github.com/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint)](https://github.com/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint/issues)
 
 > 🚀 A modern, responsive CSS component library with beautiful pre-built components and dark/light theme support.
 
@@ -51,13 +51,13 @@ Snippix is a comprehensive collection of ready-to-use CSS components designed to
 ### Option 1: Clone the Repository
 
 ```bash
-git clone https://github.com/SAFAL-TIWARI/Snippix.git
-cd Snippix
+git clone https://github.com/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint.git
+cd snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint
 ```
 
 ### Option 2: Download ZIP
 
-Download the latest release from the [GitHub repository](https://github.com/SAFAL-TIWARI/Snippix).
+Download the latest release from the [GitHub repository](https://github.com/SAFAL-TIWARI/snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint).
 
 ### Option 3: Use Individual Components
 
@@ -66,7 +66,7 @@ Simply copy the HTML and CSS code for any component directly from the live docum
 ## 📁 Project Structure
 
 ```
-Snippix/
+snippix_SAFAL_TIWARI_LetsUpgradeFrontendSprint/
 ├── 📄 index.html          # Main documentation page
 ├── 🎨 styles.css          # All component styles and themes
 ├── ⚡ script.js           # Theme switching and navigation
